@@ -74,7 +74,7 @@ const Monday = () => {
           <p id='one' className='p-4' onClick={handleClick} >Walk half mile/Jog half mile x1</p>
         </div>
         <div className='bg-black text-white flex justify-between'>
-          <p id='two' className='p-4' onClick={handleClick}>Lat Pulldowns ----- 3 x 10</p>
+          <p id='two' className='p-4 text-center' onClick={handleClick}>Lat Pulldowns ----- 3 x 10</p>
           <img src={Latpulldown} className='img'></img>
         </div>
         <div className='bg-white text-black flex justify-between'>
