@@ -61,6 +61,7 @@ const Monday = () => {
         break;
     }
   }
+  
 
   return (
     <div className='text-white'>
@@ -93,6 +94,9 @@ const Monday = () => {
         </div>
         <div className='bg-white text-black'>
           <p id='nine' className='p-4' onClick={handleClick}>Pushups ----- x20</p>
+        </div>
+        <div>
+          <button onClick={() => {localStorage.clear()}}>Reset</button>
         </div>
       </div>
     </div>
