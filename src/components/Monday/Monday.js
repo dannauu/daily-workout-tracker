@@ -64,6 +64,10 @@ const Monday = () => {
     }
   }
   
+  function reload() {
+    localStorage.clear();
+    window.location.reload()
+  }
 
   return (
     <div className='text-white'>
@@ -104,7 +108,7 @@ const Monday = () => {
           <p id='nine' className='p-4' onClick={handleClick}>Pushups ----- x20</p>
         </div>
         <div>
-          <button onClick={() => {localStorage.clear()}}>Reset</button>
+          <button onClick={reload}>Reset</button>
         </div>
       </div>
     </div>
