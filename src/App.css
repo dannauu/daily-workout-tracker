@@ -8,8 +8,9 @@
     font-family: 'Permanent Marker', cursive;
 }
 
-.test {
+.crossout {
     text-decoration: line-through;
     text-decoration-color: red;
     text-decoration-thickness: 5px;
+    padding: 0;
 }
