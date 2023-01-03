@@ -11,6 +11,12 @@
 .crossout {
     text-decoration: line-through;
     text-decoration-color: red;
-    text-decoration-thickness: 5px;
+    text-decoration-thickness: 4px;
     padding: 0;
+    display: block;
+}
+
+.img {
+    height: 100px;
+    width: 100px;
 }

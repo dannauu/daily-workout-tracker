@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react'
+import Latpulldown from '../assets/img/lat-pulldown.png'
+import DumbbellRow from '../assets/img/dumbbellRow.png'
+import SeatedRows from '../assets/img/seatedRows.png'
+import BentOverRow from '../assets/img/bentOverRow.png'
+import BackExtension from '../assets/img/backExtension.png'
+import Deadlift from '../assets/img/deadlift.png'
 
 const Monday = () => {
-  const [notDone, setNotDone] = useState(false);
-  const [pTag, setPTag] = useState(0);
 
   useEffect(() => {
-
     const allKeys = Object.keys(localStorage);
     allKeys.includes('one') ? document.getElementById('one').classList.add('crossout') : console.log('no')
     allKeys.includes('two') ? document.getElementById('two').classList.add('crossout') : console.log('no')
@@ -20,7 +23,6 @@ const Monday = () => {
 
 
   function handleClick(event) {
-    setNotDone(true)
     const pTag = event.target.getAttribute('id');
     switch (pTag) {
       case 'one':
@@ -71,23 +73,29 @@ const Monday = () => {
         <div className='bg-white text-black'>
           <p id='one' className='p-4' onClick={handleClick} >Walk half mile/Jog half mile x1</p>
         </div>
-        <div className='bg-black text-white'>
+        <div className='bg-black text-white flex justify-between'>
           <p id='two' className='p-4' onClick={handleClick}>Lat Pulldowns ----- 3 x 10</p>
+          <img src={Latpulldown} className='img'></img>
         </div>
-        <div className='bg-white text-black'>
+        <div className='bg-white text-black flex justify-between'>
           <p id='three' className='p-4' onClick={handleClick}>Dumbbell Row ----- 3 x 10</p>
+          <img src={DumbbellRow} className='img'></img>
         </div>
-        <div className='bg-black text-white'>
-          <p id='four' className='p-4' onClick={handleClick}>Machine Rows ----- 3 x 10</p>
+        <div className='bg-black text-white flex justify-between'>
+          <p id='four' className='p-4' onClick={handleClick}>Bent-Over Rows ----- 3 x 10</p>
+          <img src={BentOverRow} className='img'></img>
         </div>
-        <div className='bg-white text-black'>
+        <div className='bg-white text-black flex justify-between'>
           <p id='five' className='p-4' onClick={handleClick}>Seated Rows ----- 3 x 10</p>
+          <img src={SeatedRows} className='img'></img>
         </div>
-        <div className='bg-black text-white'>
-          <p id='six' className='p-4' onClick={handleClick}>Reverse Crunches ----- 2 x 10</p>
+        <div className='bg-black text-white flex justify-between'>
+          <p id='six' className='p-4' onClick={handleClick}>Back Extensions ----- 2 x 10</p>
+          <img src={BackExtension} className='img'></img>
         </div>
-        <div className='bg-white text-black'>
+        <div className='bg-white text-black flex justify-between'>
           <p id='seven' className='p-4' onClick={handleClick}>Deadlift ----- 3 x 10</p>
+          <img src={Deadlift} className='img'></img>
         </div>
         <div className='bg-black text-white'>
           <p id='eight' className='p-4' onClick={handleClick}>Pullups ----- x5</p>
