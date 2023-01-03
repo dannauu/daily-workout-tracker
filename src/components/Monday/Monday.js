@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import Latpulldown from '../assets/img/lat-pulldown.png'
-import DumbbellRow from '../assets/img/dumbbellRow.png'
-import SeatedRows from '../assets/img/seatedRows.png'
-import BentOverRow from '../assets/img/bentOverRow.png'
-import BackExtension from '../assets/img/backExtension.png'
-import Deadlift from '../assets/img/deadlift.png'
+import Latpulldown from '../assets/img/back/lat-pulldown.png'
+import DumbbellRow from '../assets/img/back/dumbbellRow.png'
+import SeatedRows from '../assets/img/back/seatedRows.png'
+import BentOverRow from '../assets/img/back/bentOverRow.png'
+import BackExtension from '../assets/img/back/backExtension.png'
+import Deadlift from '../assets/img/back/deadlift.png'
 
 const Monday = () => {
 

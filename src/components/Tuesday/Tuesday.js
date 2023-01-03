@@ -1,10 +1,10 @@
 import { React, useEffect, useState } from "react"
-import InclineBench from '../assets/img/inclineChestPress.png';
-import DeclineBench from '../assets/img/declineChestPress.png';
-import DumbbellChestFly from '../assets/img/dumbbellChestFly.png';
-import CableFly from '../assets/img/cableFlys.png'
-import DumbbellChestPress from '../assets/img/dumbbellChestPress.png'
-import MachineChestPress from '../assets/img/machineChestPress.png'
+import InclineBench from '../assets/img/chest/inclineChestPress.png';
+import DeclineBench from '../assets/img/chest/declineChestPress.png';
+import DumbbellChestFly from '../assets/img/chest/dumbbellChestFly.png';
+import CableFly from '../assets/img/chest/cableFlys.png'
+import DumbbellChestPress from '../assets/img/chest/dumbbellChestPress.png'
+import MachineChestPress from '../assets/img/chest/machineChestPress.png'
 
 const Tuesday = () => {
   useEffect(() => {
@@ -71,12 +71,12 @@ const Tuesday = () => {
   return (
     <div className='text-white'>
       <h1 className='text-center text-6xl p-2 bg-white text-black'>Tuesday</h1>
-      <h2 className='text-center text-2xl p-3 text-green-600'>Chest and Abs</h2>
+      <h2 className='text-center text-2xl p-3 text-green-600'>Chest</h2>
       <div className='text-center'>
         <div className='bg-white text-black'>
           <p id='one' className='p-4' onClick={handleClick} >Walk half mile/Jog half mile x1</p>
         </div>
-        <div className='bg-black text-white flex justify-between'>
+        <div className='bg-black text-white flex justify-between' id="div2">
           <p id='two' className='p-4 text-center' onClick={handleClick}>Incline Bench ----- 3 x 10</p>
           <img src={InclineBench} className='img'></img>
         </div>
