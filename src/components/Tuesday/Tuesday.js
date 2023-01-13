@@ -70,33 +70,34 @@ const Tuesday = () => {
 
   return (
     <div className='text-white'>
+      <p className='text-center font-sans'>Gym Hours: 5:00AM-9:00PM</p>
       <h1 className='text-center text-6xl p-2 bg-white text-black'>Tuesday</h1>
       <h2 className='text-center text-2xl p-3 text-green-600'>Chest</h2>
       <div className='text-center'>
         <div className='bg-white text-black'>
           <p id='one' className='p-4' onClick={handleClick} >Walk half mile/Jog half mile x1</p>
         </div>
-        <div className='bg-black text-white flex justify-between' id="div2">
+        <div className='bg-black text-white flex justify-between items-center' id="div2">
           <p id='two' className='p-4 text-center' onClick={handleClick}>Incline Bench ----- 3 x 10</p>
           <img src={InclineBench} className='img'></img>
         </div>
-        <div className='bg-white text-black flex justify-between'>
+        <div className='bg-white text-black flex justify-between items-center'>
           <p id='three' className='p-4' onClick={handleClick}>Decline Bench ----- 3 x 10</p>
           <img src={DeclineBench} className='img'></img>
         </div>
-        <div className='bg-black text-white flex justify-between'>
+        <div className='bg-black text-white flex justify-between items-center'>
           <p id='four' className='p-4' onClick={handleClick}>Dumbbell Fly's ----- 3 x 10</p>
           <img src={DumbbellChestFly} className='img'></img>
         </div>
-        <div className='bg-white text-black flex justify-between'>
+        <div className='bg-white text-black flex justify-between items-center'>
           <p id='five' className='p-4' onClick={handleClick}>Cable Fly's ----- 3 x 10</p>
           <img src={CableFly} className='img'></img>
         </div>
-        <div className='bg-black text-white flex justify-between'>
+        <div className='bg-black text-white flex justify-between items-center'>
           <p id='six' className='p-4' onClick={handleClick}>Dumbbell Chest Press ----- 3 x 10</p>
           <img src={DumbbellChestPress} className='img'></img>
         </div>
-        <div className='bg-white text-black flex justify-between'>
+        <div className='bg-white text-black flex justify-between items-center'>
           <p id='seven' className='p-4' onClick={handleClick}>Machine Chest Press ----- 3 x 10</p>
           <img src={MachineChestPress} className='img'></img>
         </div>

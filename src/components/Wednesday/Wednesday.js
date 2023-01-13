@@ -69,6 +69,7 @@ const Wednesday = () => {
 
   return (
     <div className='text-white'>
+      <p className='text-center font-sans'>Gym Hours: 5:00AM-9:00PM</p>
       <h1 className='text-center text-6xl p-2 bg-white text-black'>Wednesday</h1>
       <h2 className='text-center text-2xl p-3 text-green-600'>Legs</h2>
       <div className='text-center'>
@@ -78,23 +79,23 @@ const Wednesday = () => {
         <div className='bg-black text-white'>
           <p id='two' className='p-4 text-center' onClick={handleClick}>Wallsit ----- 3 x 30 seconds</p>
         </div>
-        <div className='bg-white text-black flex justify-between'>
+        <div className='bg-white text-black flex justify-between items-center'>
           <p id='three' className='p-4' onClick={handleClick}>Leg Press ----- 3 x 10</p>
           <img src={LegPress} className='img'></img>
         </div>
-        <div className='bg-black text-white flex justify-between'>
+        <div className='bg-black text-white flex justify-between items-center'>
           <p id='four' className='p-4' onClick={handleClick}>Squats ----- 3 x 10</p>
           <img src={Squat} className='img'></img>
         </div>
-        <div className='bg-white text-black flex justify-between'>
+        <div className='bg-white text-black flex justify-between items-center'>
           <p id='five' className='p-4' onClick={handleClick}>Bulgarian Squat ----- 3 x 10</p>
           <img src={BulgarianSquat} className='img'></img>
         </div>
-        <div className='bg-black text-white flex justify-between'>
+        <div className='bg-black text-white flex justify-between items-center'>
           <p id='six' className='p-4' onClick={handleClick}>Calf Raises ----- 3 x 10</p>
           <img src={CalfRaises} className='img'></img>
         </div>
-        <div className='bg-white text-black flex justify-between'>
+        <div className='bg-white text-black flex justify-between items-center'>
           <p id='seven' className='p-4' onClick={handleClick}>Lunges ----- 3 x 10</p>
           <img src={Lunges} className='img'></img>
         </div>
