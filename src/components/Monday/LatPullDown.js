@@ -22,6 +22,7 @@ const LatPullDown = () => {
         console.log(`saved value: ${value}`)
         const date = dayjs().format('MMM D, YYYY')
         localStorage.setItem('Lat-Pull-Down', `${value +  ' pounds on '  + date}`)
+        window.location.reload();
     }
 
     return (
