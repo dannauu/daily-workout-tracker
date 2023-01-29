@@ -22,6 +22,7 @@ const DumbbellRow = () => {
         console.log(`saved value: ${value}`)
         const date = dayjs().format('MMM D, YYYY')
         localStorage.setItem('Dumbbell-Row', `${value +  ' pounds on '  + date}`)
+        window.location.reload();
     }
 
     return (

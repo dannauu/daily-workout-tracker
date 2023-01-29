@@ -22,6 +22,7 @@ const BackExtension = () => {
         console.log(`saved value: ${value}`)
         const date = dayjs().format('MMM D, YYYY')
         localStorage.setItem('Back-Extension', `${value +  ' pounds on '  + date}`)
+        window.location.reload();
     }
 
     return (

@@ -22,6 +22,7 @@ const BentOverRows = () => {
         console.log(`saved value: ${value}`)
         const date = dayjs().format('MMM D, YYYY')
         localStorage.setItem('Bent-Over-Rows', `${value +  ' pounds on '  + date}`)
+        window.location.reload();
     }
 
     return (

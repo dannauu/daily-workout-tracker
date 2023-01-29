@@ -22,6 +22,7 @@ export const SeatedRows = () => {
         console.log(`saved value: ${value}`)
         const date = dayjs().format('MMM D, YYYY')
         localStorage.setItem('Seated-Rows', `${value +  ' pounds on '  + date}`)
+        window.location.reload();
     }
 
     return (
