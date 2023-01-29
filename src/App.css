@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
-.googleFont {
-    font-family: 'Permanent Marker', cursive;
-}
 
 .crossout {
     text-decoration: line-through;

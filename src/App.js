@@ -12,7 +12,7 @@ import Sunday from './components/Sunday/Sunday'
 function App() {
   const day = dayjs().day()
   console.log(day)
-  const [currentDay, setCurrentDay] = useState(day)
+  const [currentDay, setCurrentDay] = useState(1)
   return (
     <div className="bg-black min-h-screen googleFont">
       {currentDay === 1 && <Monday/>}
