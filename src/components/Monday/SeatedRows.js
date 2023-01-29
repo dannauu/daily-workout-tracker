@@ -29,12 +29,12 @@ export const SeatedRows = () => {
         <div className='p-2 min-h-screen bg-no-repeat bg-contain font-semibold' style={{ backgroundImage: `url(${SeatedRowsImg})` }}>
             <div className='bg-black/50 p-2'>
                 <h1 className='text-2xl'>Seated Rows</h1>
-                <h2>Last Weeks Weight: <span className='text-lime-500'>{items}</span></h2>
+                <h2 className='mb-4'>Last Weeks Weight: <span className='text-lime-500 font-extrabold'>{items}</span></h2>
                 <div className="flex">
                     <button className="bg-red-500 text-white px-4" onClick={decrement}>-</button>
-                    <input type="number" value={value} className="w-2/12 text-center" onChange={handleChange}/>
-                    <button className="bg-green-500 text-white px-4" onClick={increment}>+</button>
-                    <button className="bg-blue-500 text-white p-2 ml-1 rounded-mg" onClick={handleSave}><TfiSave/></button>
+                    <input type="number" value={value} className="w-2/12 text-center ml-2" onChange={handleChange}/>
+                    <button className="bg-green-500 text-white px-4 ml-2" onClick={increment}>+</button>
+                    <button className="bg-blue-500 text-white p-2 ml-10 text-2xl rounded-mg" onClick={handleSave}><TfiSave/></button>
                 </div>
             </div>
         </div>
