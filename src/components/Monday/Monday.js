@@ -19,31 +19,32 @@ const Monday = () => {
 
   const date = dayjs().format('MMM D, YYYY')
 
+
   return (
-    <>
+    <div className='max-h-screen overflow-hidden'>
       <div className='text-white'>
         <p className='text-center'>Gym Hours: 5:00AM-9:00PM</p>
         <p className='text-center'>Today: {date}</p>
-        <h1 className='text-center text-6xl p-2 bg-white text-black'>Monday</h1>
+        <h1 className='text-center text-6xl p-1 bg-white text-black'>Monday</h1>
         <h2 className='text-center text-2xl p-3 text-green-600'>Back</h2>
       </div>
       <div className='grid grid-cols-3 gap-4 place-items-center mb-10'>
-        <Link to='/deadlift'>
+        <Link to='/deadlift' className='shadow-md shadow-white'>
           <img src={DeadliftImg} className='img rounded'></img>
         </Link>
-        <Link to='/back-extension'>
+        <Link to='/back-extension' className='shadow-md shadow-white'>
           <img src={BackExtensionImg} className='img rounded'></img>
         </Link>
-        <Link to='/seated-rows'>
+        <Link to='/seated-rows' className='shadow-md shadow-white'>
           <img src={SeatedRowsImg} className='img rounded'></img>
         </Link>
-        <Link to='/bent-over-rows'>
+        <Link to='/bent-over-rows' className='shadow-md shadow-white'>
           <img src={BentOverRowImg} className='img rounded'></img>
         </Link>
-        <Link to='/dumbbell-row'>
+        <Link to='/dumbbell-row' className='shadow-md shadow-white'>
           <img src={DumbbellRowImg} className='img rounded'></img>
         </Link>
-        <Link to='/lat-pulldown'>
+        <Link to='/lat-pulldown' className='shadow-md shadow-white'>
           <img src={LatpulldownImg} className='img rounded'></img>
         </Link>
       </div>
@@ -55,7 +56,7 @@ const Monday = () => {
         <Route path="/dumbbell-row" element={<DumbbellRow />} />
         <Route path="/lat-pulldown" element={<LatPullDown />} />
       </Routes>
-    </>
+    </div>
 
   )
 }

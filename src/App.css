@@ -13,3 +13,23 @@
     height: 100px;
     width: 100px;
 }
+
+.completed {
+    border: red solid 2px;
+    
+}
+
+.crossout-container {
+    position: relative;
+  }
+  
+  .crossout-container:before {
+    content: "X";
+    color: red;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
