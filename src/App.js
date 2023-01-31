@@ -11,10 +11,9 @@ import Sunday from './components/Sunday/Sunday'
 
 function App() {
   const day = dayjs().day()
-  console.log(day)
-  const [currentDay, setCurrentDay] = useState(1)
+  const [currentDay, setCurrentDay] = useState(day)
   return (
-    <div className="bg-black min-h-screen googleFont">
+    <div className="bg-black">
       {currentDay === 1 && <Monday/>}
       {currentDay === 2 && <Tuesday/>}
       {currentDay === 3 && <Wednesday/>}

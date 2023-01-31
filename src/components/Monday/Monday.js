@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import LatpulldownImg from '../assets/img/back/lat-pulldown.png'
 import DumbbellRowImg from '../assets/img/back/dumbbellRow.png'
 import SeatedRowsImg from '../assets/img/back/seatedRows.png'
@@ -8,7 +8,7 @@ import DeadliftImg from '../assets/img/back/deadlift.png'
 import { Route, Routes, Link } from "react-router-dom"
 import Deadlift from './Deadlift'
 import BackExtension from './BackExtension'
-import { SeatedRows } from './SeatedRows'
+import SeatedRows from './SeatedRows'
 import BentOverRows from './BentOverRows'
 import DumbbellRow from './DumbbellRow'
 import LatPullDown from './LatPullDown'
@@ -21,8 +21,8 @@ const Monday = () => {
 
 
   return (
-    <div className='max-h-screen overflow-hidden'>
-      <div className='text-white'>
+    <div className='text-white min-h-screen'>
+      <div>
         <p className='text-center'>Gym Hours: 5:00AM-9:00PM</p>
         <p className='text-center'>Today: {date}</p>
         <h1 className='text-center text-6xl p-1 bg-white text-black'>Monday</h1>
@@ -30,22 +30,22 @@ const Monday = () => {
       </div>
       <div className='grid grid-cols-3 gap-4 place-items-center mb-10'>
         <Link to='/deadlift' className='shadow-md shadow-white'>
-          <img src={DeadliftImg} className='img rounded'></img>
+          <img src={DeadliftImg} className='img rounded' alt='img'></img>
         </Link>
         <Link to='/back-extension' className='shadow-md shadow-white'>
-          <img src={BackExtensionImg} className='img rounded'></img>
+          <img src={BackExtensionImg} className='img rounded' alt='img'></img>
         </Link>
         <Link to='/seated-rows' className='shadow-md shadow-white'>
-          <img src={SeatedRowsImg} className='img rounded'></img>
+          <img src={SeatedRowsImg} className='img rounded' alt='img'></img>
         </Link>
         <Link to='/bent-over-rows' className='shadow-md shadow-white'>
-          <img src={BentOverRowImg} className='img rounded'></img>
+          <img src={BentOverRowImg} className='img rounded' alt='img'></img>
         </Link>
         <Link to='/dumbbell-row' className='shadow-md shadow-white'>
-          <img src={DumbbellRowImg} className='img rounded'></img>
+          <img src={DumbbellRowImg} className='img rounded' alt='img'></img>
         </Link>
         <Link to='/lat-pulldown' className='shadow-md shadow-white'>
-          <img src={LatpulldownImg} className='img rounded'></img>
+          <img src={LatpulldownImg} className='img rounded' alt='img'></img>
         </Link>
       </div>
       <Routes>

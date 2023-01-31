@@ -3,7 +3,7 @@ import SeatedRowsImg from '../assets/img/back/seatedRows.png'
 import dayjs from 'dayjs';
 import { TfiSave } from 'react-icons/tfi'
 
-export const SeatedRows = () => {
+const SeatedRows = () => {
     const [value, setValue] = useState(25);
     const [items, setItems] = useState([]);
     const increment = () => setValue(value + 5);
@@ -22,7 +22,7 @@ export const SeatedRows = () => {
         console.log(`saved value: ${value}`)
         const date = dayjs().format('MMM D, YYYY')
         localStorage.setItem('Seated-Rows', `${value +  ' pounds on '  + date}`)
-        window.location.reload();
+        window.location.href = '/';
     }
 
     return (
@@ -40,3 +40,5 @@ export const SeatedRows = () => {
         </div>
     )
 }
+
+export default SeatedRows

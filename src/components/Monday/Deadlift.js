@@ -22,7 +22,7 @@ const Deadlift = () => {
         console.log(`saved value: ${value}`)
         const date = dayjs().format('MMM D, YYYY')
         localStorage.setItem('Deadlift', `${value +  ' pounds on '  + date}`)
-        window.location.reload();
+        window.location.href = '/';
     }
 
     return (

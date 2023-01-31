@@ -1,116 +1,59 @@
 import React, {useEffect} from 'react'
-import DumbbellShoulderPress from '../assets/img/shoulders/dumbbellShoulderPress.png'
-import Shrugs from '../assets/img/shoulders/shrugs.png'
-import ReverseFlys from '../assets/img/shoulders/reverseFly.png'
-import LateralRaises from '../assets/img/shoulders/lateralRaise.png'
-import MachineShoulderPress from '../assets/img/shoulders/machineShoulderPress.png'
-import BehindShrugs from '../assets/img/shoulders/behindShrugs.png'
+import DumbbellShoulderPressImg from '../assets/img/shoulders/dumbbellShoulderPress.png'
+import ShrugsImg from '../assets/img/shoulders/shrugs.png'
+import ReverseFlysImg from '../assets/img/shoulders/reverseFly.png'
+import LateralRaisesImg from '../assets/img/shoulders/lateralRaise.png'
+import MachineShoulderPressImg from '../assets/img/shoulders/machineShoulderPress.png'
+import BehindShrugsImg from '../assets/img/shoulders/behindShrugs.png'
+import dayjs from 'dayjs';
+import { Route, Routes, Link } from "react-router-dom"
+import BehindBackShrugs from './BehindBackShrugs'
+import MachineShoulderPress from './MachineShoulderPress'
+import LateralRaises from './LateralRaises'
+import ReverseFly from './ReverseFly'
+import Shrugs from './Shrugs'
+import DumbbellShoulderPress from './DumbbellShoulderPress'
 
 const Thursday = () => {
-  useEffect(() => {
-    const allKeys = Object.keys(localStorage);
-    allKeys.includes('one') ? document.getElementById('one').classList.add('crossout') : console.log('no')
-    allKeys.includes('two') ? document.getElementById('two').classList.add('crossout') : console.log('no')
-    allKeys.includes('three') ? document.getElementById('three').classList.add('crossout') : console.log('no')
-    allKeys.includes('four') ? document.getElementById('four').classList.add('crossout') : console.log('no')
-    allKeys.includes('five') ? document.getElementById('five').classList.add('crossout') : console.log('no')
-    allKeys.includes('six') ? document.getElementById('six').classList.add('crossout') : console.log('no')
-    allKeys.includes('seven') ? document.getElementById('seven').classList.add('crossout') : console.log('no')
-    allKeys.includes('eight') ? document.getElementById('eight').classList.add('crossout') : console.log('no')
-    allKeys.includes('nine') ? document.getElementById('nine').classList.add('crossout') : console.log('no')
-  }, [])
-
-
-  function handleClick(event) {
-    const pTag = event.target.getAttribute('id');
-    switch (pTag) {
-      case 'one':
-        localStorage.setItem("one", 1)
-        document.getElementById('one').classList.add('crossout')
-        break;
-      case 'two':
-        localStorage.setItem("two", 2)
-        document.getElementById('two').classList.add('crossout')
-        break;
-      case 'three':
-        localStorage.setItem("three", 3)
-        document.getElementById('three').classList.add('crossout')
-        break;
-      case 'four':
-        localStorage.setItem("four", 4)
-        document.getElementById('four').classList.add('crossout')
-        break;
-      case 'five':
-        localStorage.setItem("five", 5)
-        document.getElementById('five').classList.add('crossout')
-        break;
-      case 'six':
-        localStorage.setItem("six", 6)
-        document.getElementById('six').classList.add('crossout')
-        break;
-      case 'seven':
-        localStorage.setItem("seven", 7)
-        document.getElementById('seven').classList.add('crossout')
-        break;
-      case 'eight':
-        localStorage.setItem("eight", 7)
-        document.getElementById('eight').classList.add('crossout')
-        break;
-      case 'nine':
-        localStorage.setItem("nine", 7)
-        document.getElementById('nine').classList.add('crossout')
-        break;
-    }
-  }
   
-  function reload() {
-    localStorage.clear();
-    window.location.reload()
-  }
+  const date = dayjs().format('MMM D, YYYY')
 
   return (
-    <div className='text-white'>
-      <p className='text-center font-sans'>Gym Hours: 5:00AM-9:00PM</p>
-      <h1 className='text-center text-6xl p-2 bg-white text-black'>Thursday</h1>
-      <h2 className='text-center text-2xl p-3 text-green-600'>Shoulders</h2>
-      <div className='text-center'>
-        <div className='bg-white text-black'>
-          <p id='one' className='p-4' onClick={handleClick} >Walk half mile/Jog half mile x1</p>
-        </div>
-        <div className='bg-black text-white flex justify-between items-center'>
-          <p id='two' className='p-4 text-center' onClick={handleClick}>Shoulder Press ----- 3 x 10</p>
-          <img src={DumbbellShoulderPress} className='img'></img>
-        </div>
-        <div className='bg-white text-black flex justify-between items-center'>
-          <p id='three' className='p-4' onClick={handleClick}>Shoulder Shrugs ----- 3 x 10</p>
-          <img src={Shrugs} className='img'></img>
-        </div>
-        <div className='bg-black text-white flex justify-between items-center'>
-          <p id='four' className='p-4' onClick={handleClick}>Reverse Flys ----- 3 x 10</p>
-          <img src={ReverseFlys} className='img'></img>
-        </div>
-        <div className='bg-white text-black flex justify-between items-center'>
-          <p id='five' className='p-4' onClick={handleClick}>Lateral Raises ----- 3 x 10</p>
-          <img src={LateralRaises} className='img'></img>
-        </div>
-        <div className='bg-black text-white flex justify-between items-center'>
-          <p id='six' className='p-4' onClick={handleClick}>Machine Shoulder Press ----- 3 x 10</p>
-          <img src={MachineShoulderPress} className='img'></img>
-        </div>
-        <div className='bg-white text-black flex justify-between items-center'>
-          <p id='seven' className='p-4' onClick={handleClick}>Lunges ----- 3 x 10</p>
-          <img src={BehindShrugs} className='img'></img>
-        </div>
-        <div className='bg-black text-white'>
-          <p id='eight' className='p-4' onClick={handleClick}>Pullups ----- x5</p>
-        </div>
-        <div className='bg-white text-black'>
-          <p id='nine' className='p-4' onClick={handleClick}>Pushups ----- x30</p>
-        </div>
-        <div>
-          <button onClick={reload}>Reset</button>
-        </div>
+    <div className='text-white min-h-screen'>
+      <div>
+        <p className='text-center'>Gym Hours: 5:00AM-9:00PM</p>
+        <p className='text-center'>Today: {date}</p>
+        <h1 className='text-center text-6xl p-1 bg-white text-black'>Thursday</h1>
+        <h2 className='text-center text-2xl p-3 text-green-600'>Shoulders</h2>
       </div>
+      <div className='grid grid-cols-3 gap-4 place-items-center mb-10'>
+        <Link to='/dumbbell-shoulder-press' className='shadow-md shadow-white'>
+          <img src={DumbbellShoulderPressImg} className='img rounded' alt='img'></img>
+        </Link>
+        <Link to='/shrugs' className='shadow-md shadow-white'>
+          <img src={ShrugsImg} className='img rounded' alt='img'></img>
+        </Link>
+        <Link to='/reverse-fly' className='shadow-md shadow-white'>
+          <img src={ReverseFlysImg} className='img rounded' alt='img'></img>
+        </Link>
+        <Link to='/lateral-raises' className='shadow-md shadow-white'>
+          <img src={LateralRaisesImg} className='img rounded' alt='img'></img>
+        </Link>
+        <Link to='/machine-shoulder-press' className='shadow-md shadow-white'>
+          <img src={MachineShoulderPressImg} className='img rounded' alt='img'></img>
+        </Link>
+        <Link to='/behind-back-shrugs' className='shadow-md shadow-white'>
+          <img src={BehindShrugsImg} className='img rounded' alt='img'></img>
+        </Link>
+      </div>
+      <Routes>
+        <Route path="/behind-back-shrugs" element={<BehindBackShrugs />} />
+        <Route path="/machine-shoulder-press" element={<MachineShoulderPress />} />
+        <Route path="/lateral-raises" element={<LateralRaises />} />
+        <Route path="/reverse-fly" element={<ReverseFly />} />
+        <Route path="/shrugs" element={<Shrugs />} />
+        <Route path="/dumbbell-shoulder-press" element={<DumbbellShoulderPress />} />
+      </Routes>
     </div>
   )
 }
