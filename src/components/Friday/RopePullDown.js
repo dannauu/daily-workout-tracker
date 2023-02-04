@@ -11,7 +11,7 @@ const RopePullDown = () => {
     const decrement = () => setValue(value - 5);
   
     const handleChange = event => {
-        console.log(value)
+        console.log(value) 
     };
   
     useEffect(() => {
