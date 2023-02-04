@@ -45,6 +45,10 @@ const Friday = () => {
     }
   }, []);
 
+  const refreshLocalStorage = () => {
+    localStorage.removeItem('done')
+  }
+
 
   return (
     <div className='text-white min-h-screen'>
@@ -53,6 +57,7 @@ const Friday = () => {
         <p className='text-center'>Today: {date}</p>
         <h1 className='text-center text-6xl p-1 bg-white text-black'>Friday</h1>
         <h2 className='text-center text-2xl p-3 text-green-600'>Bicep/Tricep</h2>
+
       </div>
       <div className='grid grid-cols-3 gap-4 place-items-center mb-10'>
         <Link to='/curls' className='shadow-md shadow-white' id='curls'>
@@ -74,6 +79,7 @@ const Friday = () => {
           <img src={SkullCrusherImg} className='img rounded' alt='Skull-Crusher-img'></img>
         </Link>
       </div>
+
       <Routes>
         <Route path="/" element={<RandomQuote />} />
         <Route path="/curls" element={<Curls />} />
@@ -83,6 +89,8 @@ const Friday = () => {
         <Route path="/zottman-curls" element={<ZottmanCurls />} />
         <Route path="/tricep-extension" element={<TricepExtension />} />
       </Routes>
+      <button className='flex m-auto bg-red-800 p-2' onClick={refreshLocalStorage}>Refresh</button>
+
     </div>
   )
 }

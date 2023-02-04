@@ -32,7 +32,7 @@ const SkullCrusher = () => {
     }
   
     return (
-        <div className='p-2 min-h-screen bg-no-repeat bg-contain font-semibold' style={{ backgroundImage: `url(${SkullCrusherImg})` }}>
+        <div className='p-2 h-96 bg-contain font-semibold' style={{ backgroundImage: `url(${SkullCrusherImg})` }}>
             <div className='bg-black/50 p-2'>
                 <h1 className='text-2xl'>Skull Crusher</h1>
                 <h2 className='mb-4'>Last Weeks Weight: <span className='text-lime-500 font-extrabold'>{items}</span></h2>
