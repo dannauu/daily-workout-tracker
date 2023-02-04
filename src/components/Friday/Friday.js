@@ -47,6 +47,7 @@ const Friday = () => {
 
   const refreshLocalStorage = () => {
     localStorage.removeItem('done')
+    window.location.reload()
   }
 
 
