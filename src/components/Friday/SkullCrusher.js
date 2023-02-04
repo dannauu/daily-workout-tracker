@@ -7,6 +7,7 @@ import localStorageHelper from '../localStorage'
 const SkullCrusher = () => {
     const [value, setValue] = useState(25);
     const [items, setItems] = useState([]);
+    const [showMessage, setShowMessage] = useState(false);
     const increment = () => setValue(value + 5);
     const decrement = () => setValue(value - 5);
   
@@ -22,7 +23,10 @@ const SkullCrusher = () => {
     const handleSave = event => {
         const date = dayjs().format('MMM D, YYYY')
         localStorage.setItem('Skull-Crusher', `${value +  ' pounds on '  + date}`)
-        window.location.reload()
+        setShowMessage(true);
+        setTimeout(() => {
+            window.location.reload()
+        }, 500);
     }
 
     const markDone = event => {
@@ -44,6 +48,7 @@ const SkullCrusher = () => {
                     <button className='bg-blue-900 ml-2 p-2' onClick={markDone}>Mark Done</button>
                 </div>
             </div>
+            {showMessage && <p className="bg-green-500 text-center mt-2">Weight Saved!</p>}
         </div>
     )
 }
