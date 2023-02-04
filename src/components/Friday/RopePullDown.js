@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import dayjs from 'dayjs';
 import { TfiSave } from 'react-icons/tfi'
-import DumbbellChestFlyImg from '../assets/img/chest/dumbbellChestFly.png';
+import RopePulldownsImg from '../assets/img/arms/ropePullDowns.png'
 import localStorageHelper from '../localStorage'
 
 const RopePullDown = () => {
@@ -33,7 +33,7 @@ const RopePullDown = () => {
   
   
     return (
-        <div className='p-2 min-h-screen bg-no-repeat bg-contain font-semibold' style={{ backgroundImage: `url(${DumbbellChestFlyImg})` }}>
+        <div className='p-2 min-h-screen bg-no-repeat bg-contain font-semibold' style={{ backgroundImage: `url(${RopePulldownsImg})` }}>
             <div className='bg-black/50 p-2'>
                 <h1 className='text-2xl'>Rope Pulldown</h1>
                 <h2 className='mb-4'>Last Weeks Weight: <span className='text-lime-500 font-extrabold'>{items}</span></h2>
