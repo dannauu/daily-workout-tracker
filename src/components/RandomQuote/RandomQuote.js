@@ -15,6 +15,11 @@ const RandomQuote = () => {
     fetchData();
   }, []);
 
+  const refreshLocalStorage = () => {
+    localStorage.removeItem('done')
+    window.location.reload()
+  }
+
   useEffect(() => {
     async function fetchData() {
       try {
@@ -34,7 +39,12 @@ const RandomQuote = () => {
   if (error) return <p>An error has occurred: {error.message}</p>;
 
   return (
+    <>
     <div className='text-center text-2xl text-green-500 p-2 font-semibold'>{`"${data}`}"</div>
+    <button className='flex m-auto bg-red-800 p-2 rounded' onClick={refreshLocalStorage}>Start Workout Over</button>
+    </>
+    
+
   )
 }
 

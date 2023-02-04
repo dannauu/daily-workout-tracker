@@ -45,10 +45,7 @@ const Friday = () => {
     }
   }, []);
 
-  const refreshLocalStorage = () => {
-    localStorage.removeItem('done')
-    window.location.reload()
-  }
+
 
 
   return (
@@ -90,7 +87,6 @@ const Friday = () => {
         <Route path="/zottman-curls" element={<ZottmanCurls />} />
         <Route path="/tricep-extension" element={<TricepExtension />} />
       </Routes>
-      <button className='flex m-auto bg-red-800 p-2' onClick={refreshLocalStorage}>Refresh</button>
 
     </div>
   )
