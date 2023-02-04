@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import DumbbellShoulderPressImg from '../assets/img/shoulders/dumbbellShoulderPress.png'
 import ShrugsImg from '../assets/img/shoulders/shrugs.png'
 import ReverseFlysImg from '../assets/img/shoulders/reverseFly.png'
@@ -13,9 +13,10 @@ import LateralRaises from './LateralRaises'
 import ReverseFly from './ReverseFly'
 import Shrugs from './Shrugs'
 import DumbbellShoulderPress from './DumbbellShoulderPress'
+import RandomQuote from "../RandomQuote/RandomQuote";
 
 const Thursday = () => {
-  
+
   const date = dayjs().format('MMM D, YYYY')
 
   return (
@@ -47,6 +48,7 @@ const Thursday = () => {
         </Link>
       </div>
       <Routes>
+        <Route path="/" element={<RandomQuote />} />
         <Route path="/behind-back-shrugs" element={<BehindBackShrugs />} />
         <Route path="/machine-shoulder-press" element={<MachineShoulderPress />} />
         <Route path="/lateral-raises" element={<LateralRaises />} />

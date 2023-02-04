@@ -13,6 +13,7 @@ import BentOverRows from './BentOverRows'
 import DumbbellRow from './DumbbellRow'
 import LatPullDown from './LatPullDown'
 import dayjs from 'dayjs';
+import RandomQuote from "../RandomQuote/RandomQuote";
 
 
 const Monday = () => {
@@ -49,6 +50,7 @@ const Monday = () => {
         </Link>
       </div>
       <Routes>
+        <Route path="/" element={<RandomQuote />} />
         <Route path="/deadlift" element={<Deadlift />} />
         <Route path="/back-extension" element={<BackExtension />} />
         <Route path="/seated-rows" element={<SeatedRows />} />

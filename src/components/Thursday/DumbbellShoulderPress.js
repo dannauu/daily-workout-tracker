@@ -6,6 +6,7 @@ import DumbbellShoulderPressImg from '../assets/img/shoulders/dumbbellShoulderPr
 const DumbbellShoulderPress = () => {
     const [value, setValue] = useState(25);
     const [items, setItems] = useState([]);
+    const [done, setDone] = useState(true)
     const increment = () => setValue(value + 5);
     const decrement = () => setValue(value - 5);
   
@@ -17,10 +18,12 @@ const DumbbellShoulderPress = () => {
         const storedItems = localStorage.getItem('Dumbbell-Shoulder-Press') || [];
         setItems(storedItems);
       }, []);
+
   
     const handleSave = event => {
         const date = dayjs().format('MMM D, YYYY')
         localStorage.setItem('Dumbbell-Shoulder-Press', `${value +  ' pounds on '  + date}`)
+        localStorage.setItem('DumbbellShoulder', "Done")
         window.location.href = '/';
     }
   

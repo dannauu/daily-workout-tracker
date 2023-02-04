@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import dayjs from 'dayjs';
 import { TfiSave } from 'react-icons/tfi'
 import StandingCurlsImg from '../assets/img/arms/standingCurls.png'
+import localStorageHelper from '../localStorage'
+
 
 const Curls = () => {
     const [value, setValue] = useState(25);
@@ -21,7 +23,12 @@ const Curls = () => {
     const handleSave = event => {
         const date = dayjs().format('MMM D, YYYY')
         localStorage.setItem('Curls', `${value +  ' pounds on '  + date}`)
-        window.location.href = '/';
+        window.location.reload()
+    }
+
+    const markDone = event => {
+        localStorageHelper('done', 'curls')
+        window.location.href = '/'
     }
   
     return (
@@ -34,6 +41,7 @@ const Curls = () => {
                     <input type="number" value={value} className="text-black w-2/12 text-center ml-2" onChange={handleChange}/>
                     <button className="bg-green-500 text-white px-4 ml-2" onClick={increment}>+</button>
                     <button className="bg-blue-500 text-white p-2 ml-10 text-2xl rounded-mg" onClick={handleSave}><TfiSave/></button>
+                    <button className='bg-blue-900 ml-2 p-2' onClick={markDone}>Mark Done</button>
                 </div>
             </div>
         </div>

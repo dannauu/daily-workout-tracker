@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import dayjs from 'dayjs';
 import { TfiSave } from 'react-icons/tfi'
 import DumbbellChestFlyImg from '../assets/img/chest/dumbbellChestFly.png';
+import localStorageHelper from '../localStorage'
 
 const TricepExtension = () => {
     const [value, setValue] = useState(25);
@@ -21,7 +22,14 @@ const TricepExtension = () => {
     const handleSave = event => {
         const date = dayjs().format('MMM D, YYYY')
         localStorage.setItem('Tricep-Extension', `${value +  ' pounds on '  + date}`)
-        window.location.href = '/';
+        window.location.reload()
+
+    }
+    
+    const markDone = event => {
+        localStorageHelper('done', 'tricep-extension')
+        window.location.href = '/'
+
     }
   
     return (
@@ -34,6 +42,7 @@ const TricepExtension = () => {
                     <input type="number" value={value} className="text-black w-2/12 text-center ml-2" onChange={handleChange}/>
                     <button className="bg-green-500 text-white px-4 ml-2" onClick={increment}>+</button>
                     <button className="bg-blue-500 text-white p-2 ml-10 text-2xl rounded-mg" onClick={handleSave}><TfiSave/></button>
+                    <button className='bg-blue-900 ml-2 p-2' onClick={markDone}>Mark Done</button>
                 </div>
             </div>
         </div>

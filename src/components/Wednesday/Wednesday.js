@@ -13,6 +13,7 @@ import LegPress from './LegPress'
 import Lunges from './Lunges'
 import Squats from './Squats'
 import Wallsit from './Wallsit'
+import RandomQuote from "../RandomQuote/RandomQuote";
 
 const Wednesday = () => {
 
@@ -47,6 +48,7 @@ const Wednesday = () => {
         </Link>
       </div>
       <Routes>
+        <Route path="/" element={<RandomQuote />} />
         <Route path="/bulgarian-squats" element={<BulgarianSquats />} />
         <Route path="/calf-raises" element={<CalfRaises />} />
         <Route path="/leg-press" element={<LegPress />} />
