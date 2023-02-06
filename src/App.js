@@ -15,17 +15,24 @@ function App() {
   const day = dayjs().day()
   const date = dayjs().format('MMM D, YYYY')
   const [currentDay, setCurrentDay] = useState(day)
+  const [selectedOption, setSelectedOption] = useState('');
 
-
+  const handleChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
 
   return (
     <div className="bg-black h-screen overflow-hidden">
-      <div className='font-semibold flex justify-evenly text-sm pt-2'>
-        <Link to='/monday' className='bg-green-300 rounded p-1'>Monday</Link>
-        <Link to='/tuesday' className='bg-green-300 rounded p-1'>Tuesday</Link>
-        <Link to='/wednesday' className='bg-green-300 rounded p-1'>Wednesday</Link>
-        <Link to='/thursday' className='bg-green-300 rounded p-1'>Thursday</Link>
-        <Link to="/friday" className='bg-green-300 rounded p-1'>Friday</Link>
+      <div className='flex justify-center text-white'>
+        <select value={selectedOption} onChange={handleChange} className='text-center rounded bg-black'>
+          <option value="/">Change Day</option>
+          <option value="/monday">Monday</option>
+          <option value="/tuesday">Tuesday</option>
+          <option value="/wednesday">Wednesday</option>
+          <option value="/thursday">Thursday</option>
+          <option value="/friday">Friday</option>
+        </select>
+        {selectedOption !== '' && <Link className='text-white bg-green-500 px-1 rounded' to={selectedOption}>Go</Link>}
       </div>
       {/* {currentDay === 1 && <Monday />}
       {currentDay === 2 && <Tuesday />}
@@ -43,8 +50,16 @@ function App() {
                 return <Sunday />;
               case 1:
                 return <Monday />;
-              default:
+              case 2:
                 return <Tuesday />;
+              case 3:
+                return <Wednesday />;
+              case 4:
+                return <Thursday />;
+              case 5:
+                return <Thursday />;
+              default:
+                return <Saturday />;
             }
           })()}
         />
