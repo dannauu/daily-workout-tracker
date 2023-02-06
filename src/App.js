@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="bg-black h-screen overflow-hidden">
-      <div className='flex justify-center text-white'>
+      <div className='flex justify-center text-white py-2'>
         <select value={selectedOption} onChange={handleChange} className='text-center rounded text-xl bg-black'>
           <option value="/">Change Day</option>
           <option value="/monday">Monday</option>
@@ -32,7 +32,7 @@ function App() {
           <option value="/thursday">Thursday</option>
           <option value="/friday">Friday</option>
         </select>
-        {selectedOption !== '' && <Link className='text-white bg-green-500 px-1 rounded' to={selectedOption}>Go</Link>}
+        {selectedOption !== '' && <Link className='text-white bg-green-500 px-1 rounded ml-2' to={selectedOption}>Go</Link>}
       </div>
       {/* {currentDay === 1 && <Monday />}
       {currentDay === 2 && <Tuesday />}
