@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import LatpulldownImg from '../assets/img/back/lat-pulldown.png'
 import DumbbellRowImg from '../assets/img/back/dumbbellRow.png'
 import SeatedRowsImg from '../assets/img/back/seatedRows.png'
@@ -17,35 +17,61 @@ import RandomQuote from "../RandomQuote/RandomQuote";
 
 
 const Monday = () => {
-
   const date = dayjs().format('MMM D, YYYY')
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const storedData = localStorage.getItem('done');
+    if (storedData) {
+      setData(JSON.parse(storedData));
+
+      if (storedData.includes('deadlift')) {
+        document.getElementById('deadlift').classList.add('crossout-container')
+      }
+      if (storedData.includes('back-extension')) {
+        document.getElementById('back-extension').classList.add('crossout-container')
+      }
+      if (storedData.includes('seated-rows')) {
+        document.getElementById('seated-rows').classList.add('crossout-container')
+      }
+      if (storedData.includes('bent-over-rows')) {
+        document.getElementById('bent-over-rows').classList.add('crossout-container')
+      }
+      if (storedData.includes('dumbbell-row')) {
+        document.getElementById('dumbbell-row').classList.add('crossout-container')
+      }
+      if (storedData.includes('lat-pulldown')) {
+        document.getElementById('lat-pulldown').classList.add('crossout-container')
+      }
+    }
+  }, []);
 
 
   return (
     <div className='text-white min-h-screen'>
-      <div>
-        <p className='text-center'>Gym Hours: 5:00AM-9:00PM</p>
-        <p className='text-center'>Today: {date}</p>
-        <h1 className='text-center text-6xl p-1 bg-white text-black'>Monday</h1>
-        <h2 className='text-center text-2xl p-3 text-green-600'>Back</h2>
+      <div className='text-center'>
+        <p>Gym Hours: 5:00AM-9:00PM</p>
+        <p>Today: {date}</p>
+        <h1 className='text-6xl p-1 bg-white text-black'>Monday</h1>
+        <h2 className='text-2xl p-3 text-green-600'>Back</h2>
       </div>
       <div className='grid grid-cols-3 gap-4 place-items-center mb-10'>
-        <Link to='/deadlift' className='shadow-md shadow-white'>
+        <Link to='/monday/deadlift' className='shadow-md shadow-white' id='deadlift'>
           <img src={DeadliftImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/back-extension' className='shadow-md shadow-white'>
+        <Link to='/monday/back-extension' className='shadow-md shadow-white' id='back-extension'>
           <img src={BackExtensionImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/seated-rows' className='shadow-md shadow-white'>
+        <Link to='/monday/seated-rows' className='shadow-md shadow-white' id='seated-rows'>
           <img src={SeatedRowsImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/bent-over-rows' className='shadow-md shadow-white'>
+        <Link to='/monday/bent-over-rows' className='shadow-md shadow-white' id='bent-over-rows'>
           <img src={BentOverRowImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/dumbbell-row' className='shadow-md shadow-white'>
+        <Link to='/monday/dumbbell-row' className='shadow-md shadow-white' id='dumbbell-row'>
           <img src={DumbbellRowImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/lat-pulldown' className='shadow-md shadow-white'>
+        <Link to='/monday/lat-pulldown' className='shadow-md shadow-white' id='lat-pulldown'>
           <img src={LatpulldownImg} className='img rounded' alt='img'></img>
         </Link>
       </div>

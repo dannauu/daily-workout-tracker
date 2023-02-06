@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect, useState} from "react"
 import InclineBenchImg from '../assets/img/chest/inclineChestPress.png';
 import DeclineBenchImg from '../assets/img/chest/declineChestPress.png';
 import DumbbellChestFlyImg from '../assets/img/chest/dumbbellChestFly.png';
@@ -16,34 +16,60 @@ import MachineChestPress from "./MachineChestPress";
 import RandomQuote from "../RandomQuote/RandomQuote";
 
 const Tuesday = () => {
-
   const date = dayjs().format('MMM D, YYYY')
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const storedData = localStorage.getItem('done');
+    if (storedData) {
+      setData(JSON.parse(storedData));
+
+      if (storedData.includes('incline-bench')) {
+        document.getElementById('incline-bench').classList.add('crossout-container')
+      }
+      if (storedData.includes('decline-bench')) {
+        document.getElementById('decline-bench').classList.add('crossout-container')
+      }
+      if (storedData.includes('dumbbell-chest-fly')) {
+        document.getElementById('dumbbell-chest-fly').classList.add('crossout-container')
+      }
+      if (storedData.includes('cable-fly')) {
+        document.getElementById('cable-fly').classList.add('crossout-container')
+      }
+      if (storedData.includes('dumbbell-chest-press')) {
+        document.getElementById('dumbbell-chest-press').classList.add('crossout-container')
+      }
+      if (storedData.includes('machine-chest-press')) {
+        document.getElementById('machine-chest-press').classList.add('crossout-container')
+      }
+    }
+  }, []);
 
   return (
     <div className='text-white min-h-screen'>
-      <div>
-        <p className='text-center'>Gym Hours: 5:00AM-9:00PM</p>
-        <p className='text-center'>Today: {date}</p>
-        <h1 className='text-center text-6xl p-1 bg-white text-black'>Tuesday</h1>
-        <h2 className='text-center text-2xl p-3 text-green-600'>Chest</h2>
+      <div className='text-center'>
+        <p>Gym Hours: 5:00AM-9:00PM</p>
+        <p>Today: {date}</p>
+        <h1 className='text-6xl p-1 bg-white text-black'>Tuesday</h1>
+        <h2 className='text-2xl p-3 text-green-600'>Chest</h2>
       </div>
       <div className='grid grid-cols-3 gap-4 place-items-center mb-10'>
-        <Link to='/incline-bench' className='shadow-md shadow-white'>
+        <Link to='/tuesday/incline-bench' className='shadow-md shadow-white' id="incline-bench">
           <img src={InclineBenchImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/decline-bench' className='shadow-md shadow-white'>
+        <Link to='/tuesday/decline-bench' className='shadow-md shadow-white' id="decline-bench">
           <img src={DeclineBenchImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/dumbbell-chest-fly' className='shadow-md shadow-white'>
+        <Link to='/tuesday/dumbbell-chest-fly' className='shadow-md shadow-white' id="dumbbell-chest-fly">
           <img src={DumbbellChestFlyImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/cable-fly' className='shadow-md shadow-white'>
+        <Link to='/tuesday/cable-fly' className='shadow-md shadow-white' id="cable-fly">
           <img src={CableFlyImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/dumbbell-chest-press' className='shadow-md shadow-white'>
+        <Link to='/tuesday/dumbbell-chest-press' className='shadow-md shadow-white' id="dumbbell-chest-press">
           <img src={DumbbellChestPressImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/machine-chest-press' className='shadow-md shadow-white'>
+        <Link to='/tuesday/machine-chest-press' className='shadow-md shadow-white' id="machine-chest-press">
           <img src={MachineChestPressImg} className='img rounded' alt='img'></img>
         </Link>
       </div>

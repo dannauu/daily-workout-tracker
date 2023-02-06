@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react'
 import dayjs from 'dayjs';
 import { TfiSave } from 'react-icons/tfi'
 import DumbbellShoulderPressImg from '../assets/img/shoulders/dumbbellShoulderPress.png'
+import localStorageHelper from '../localStorage'
 
 const DumbbellShoulderPress = () => {
     const [value, setValue] = useState(25);
     const [items, setItems] = useState([]);
-    const [done, setDone] = useState(true)
+    const [showMessage, setShowMessage] = useState(false);
     const increment = () => setValue(value + 5);
     const decrement = () => setValue(value - 5);
   
@@ -23,12 +24,19 @@ const DumbbellShoulderPress = () => {
     const handleSave = event => {
         const date = dayjs().format('MMM D, YYYY')
         localStorage.setItem('Dumbbell-Shoulder-Press', `${value +  ' pounds on '  + date}`)
-        localStorage.setItem('DumbbellShoulder', "Done")
-        window.location.href = '/';
+        setShowMessage(true);
+        setTimeout(() => {
+            window.location.reload()
+        }, 500);
+    }
+
+    const markDone = event => {
+        localStorageHelper('done', 'dumbbell-shoulder-press')
+        window.location.href = '/'
     }
   
     return (
-        <div className='p-2 min-h-screen bg-no-repeat bg-contain font-semibold' style={{ backgroundImage: `url(${DumbbellShoulderPressImg})` }}>
+        <div className='p-2 h-96 bg-contain bg-no-repeat font-semibold' style={{ backgroundImage: `url(${DumbbellShoulderPressImg})` }}>
             <div className='bg-black/50 p-2'>
                 <h1 className='text-2xl'>Dumbbell Shoulder Press</h1>
                 <h2 className='mb-4'>Last Weeks Weight: <span className='text-lime-500 font-extrabold'>{items}</span></h2>
@@ -37,8 +45,10 @@ const DumbbellShoulderPress = () => {
                     <input type="number" value={value} className="text-black w-2/12 text-center ml-2" onChange={handleChange}/>
                     <button className="bg-green-500 text-white px-4 ml-2" onClick={increment}>+</button>
                     <button className="bg-blue-500 text-white p-2 ml-10 text-2xl rounded-mg" onClick={handleSave}><TfiSave/></button>
+                    <button className='bg-blue-900 ml-2 p-2' onClick={markDone}>Mark Done</button>
                 </div>
             </div>
+            {showMessage && <p className="bg-green-500 text-center mt-2">Weight Saved!</p>}
         </div>
     )
 }
