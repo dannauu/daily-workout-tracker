@@ -31,7 +31,7 @@ const CableFly = () => {
 
     const markDone = event => {
         localStorageHelper('done', 'cable-fly')
-        window.location.href = '/'
+        window.location.href = '/tuesday'
     }
 
 

@@ -31,7 +31,7 @@ const BulgarianSquats = () => {
 
   const markDone = event => {
     localStorageHelper('done', 'bulgarian')
-    window.location.href = '/'
+    window.location.href = '/wednesday'
 }
 
   return (

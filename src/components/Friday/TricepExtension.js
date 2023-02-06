@@ -32,7 +32,7 @@ const TricepExtension = () => {
     
     const markDone = event => {
         localStorageHelper('done', 'tricep-extension')
-        window.location.href = '/'
+        window.location.href = '/friday'
 
     }
   

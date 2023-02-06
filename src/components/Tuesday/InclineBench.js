@@ -31,7 +31,7 @@ const InclineBench = () => {
 
     const markDone = event => {
         localStorageHelper('done', 'incline-bench')
-        window.location.href = '/'
+        window.location.href = '/tuesday'
     }
 
     return (

@@ -34,7 +34,7 @@ const LatPullDown = () => {
     
     const markDone = event => {
         localStorageHelper('done', 'lat-pulldown')
-        window.location.href = '/'
+        window.location.href = '/monday'
     }
 
     return (

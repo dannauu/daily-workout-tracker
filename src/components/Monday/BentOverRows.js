@@ -32,7 +32,7 @@ const BentOverRows = () => {
 
     const markDone = event => {
         localStorageHelper('done', 'bent-over-rows')
-        window.location.href = '/'
+        window.location.href = '/monday'
     }
 
     return (

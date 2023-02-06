@@ -32,7 +32,7 @@ const Curls = () => {
 
     const markDone = event => {
         localStorageHelper('done', 'curls')
-        window.location.href = '/'
+        window.location.href = '/friday'
     }
 
     return (

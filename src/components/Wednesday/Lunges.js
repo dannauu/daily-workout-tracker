@@ -31,7 +31,7 @@ const Lunges = () => {
 
   const markDone = event => {
     localStorageHelper('done', 'lunges')
-    window.location.href = '/'
+    window.location.href = '/wednesday'
 }
 
   return (

@@ -32,7 +32,7 @@ const Deadlift = () => {
 
     const markDone = event => {
         localStorageHelper('done', 'deadlift')
-        window.location.href = '/'
+        window.location.href = '/monday'
     }
 
     return (

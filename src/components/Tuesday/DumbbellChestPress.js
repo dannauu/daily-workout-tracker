@@ -31,7 +31,7 @@ const DumbbellChestPress = () => {
 
     const markDone = event => {
         localStorageHelper('done', 'dumbbell-chest-press')
-        window.location.href = '/'
+        window.location.href = '/tuesday'
     }
 
 

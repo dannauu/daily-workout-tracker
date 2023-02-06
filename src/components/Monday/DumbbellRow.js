@@ -32,7 +32,7 @@ const DumbbellRow = () => {
 
     const markDone = event => {
         localStorageHelper('done', 'dumbbell-row')
-        window.location.href = '/'
+        window.location.href = '/monday'
     }
 
 

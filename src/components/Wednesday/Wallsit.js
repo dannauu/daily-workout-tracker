@@ -31,7 +31,7 @@ const Wallsit = () => {
 
   const markDone = event => {
     localStorageHelper('done', 'wallsit')
-    window.location.href = '/'
+    window.location.href = '/wednesday'
 }
 
   return (

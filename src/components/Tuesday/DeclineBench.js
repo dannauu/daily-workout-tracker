@@ -31,7 +31,7 @@ const DeclineBench = () => {
 
     const markDone = event => {
         localStorageHelper('done', 'decline-bench')
-        window.location.href = '/'
+        window.location.href = '/tuesday'
     }
 
     return (

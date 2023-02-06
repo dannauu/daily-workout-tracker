@@ -31,7 +31,7 @@ const LegPress = () => {
 
     const markDone = event => {
         localStorageHelper('done', 'leg-press')
-        window.location.href = '/'
+        window.location.href = '/wednesday'
     }
 
     return (

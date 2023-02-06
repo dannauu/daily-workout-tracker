@@ -31,7 +31,7 @@ const Squats = () => {
 
   const markDone = event => {
     localStorageHelper('done', 'squats')
-    window.location.href = '/'
+    window.location.href = '/wednesday'
 }
 
   return (

@@ -31,7 +31,7 @@ const MachineShoulderPress = () => {
 
     const markDone = event => {
         localStorageHelper('done', 'machine-shoulder-press')
-        window.location.href = '/'
+        window.location.href = '/thursday'
     }
   
     return (

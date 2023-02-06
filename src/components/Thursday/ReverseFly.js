@@ -31,7 +31,7 @@ const ReverseFly = () => {
 
     const markDone = event => {
         localStorageHelper('done', 'reverse-fly')
-        window.location.href = '/'
+        window.location.href = '/thursday'
     }
   
     return (

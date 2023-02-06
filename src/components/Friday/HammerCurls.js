@@ -31,7 +31,7 @@ const HammerCurls = () => {
 
     const markDone = event => {
         localStorageHelper('done', 'hammer')
-        window.location.href = '/'
+        window.location.href = '/friday'
     }
   
   

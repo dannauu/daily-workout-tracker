@@ -32,7 +32,7 @@ const SeatedRows = () => {
 
     const markDone = event => {
         localStorageHelper('done', 'seated-rows')
-        window.location.href = '/'
+        window.location.href = '/monday'
     }
 
     return (

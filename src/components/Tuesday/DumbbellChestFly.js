@@ -31,7 +31,7 @@ const DumbbellChestFly = () => {
 
     const markDone = event => {
         localStorageHelper('done', 'dumbbell-chest-fly')
-        window.location.href = '/'
+        window.location.href = '/tuesday'
     }
 
     return (

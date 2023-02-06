@@ -32,7 +32,7 @@ const BackExtension = () => {
 
     const markDone = event => {
         localStorageHelper('done', 'back-extension')
-        window.location.href = '/'
+        window.location.href = '/monday'
     }
 
     return (

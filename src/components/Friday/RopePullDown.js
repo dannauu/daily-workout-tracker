@@ -31,7 +31,7 @@ const RopePullDown = () => {
 
     const markDone = event => {
         localStorageHelper('done', 'rope-pulldowns')
-        window.location.href = '/';
+        window.location.href = '/friday';
 
     }
   

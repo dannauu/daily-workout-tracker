@@ -31,7 +31,7 @@ const SkullCrusher = () => {
 
     const markDone = event => {
         localStorageHelper('done', 'skull-crusher')
-        window.location.href = '/'
+        window.location.href = '/friday'
 
     }
   

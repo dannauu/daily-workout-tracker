@@ -31,7 +31,7 @@ export const BehindBackShrugs = () => {
 
     const markDone = event => {
         localStorageHelper('done', 'behind-back-shrugs')
-        window.location.href = '/'
+        window.location.href = '/thursday'
     }
   
     return (

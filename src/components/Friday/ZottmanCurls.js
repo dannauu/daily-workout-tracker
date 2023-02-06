@@ -32,7 +32,7 @@ const ZottmanCurls = () => {
 
     const markDone = event => {
         localStorageHelper('done', 'zottman-curls')
-        window.location.href = '/'
+        window.location.href = '/friday'
 
     }
 
