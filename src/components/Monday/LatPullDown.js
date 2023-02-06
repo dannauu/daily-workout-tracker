@@ -50,6 +50,7 @@ const LatPullDown = () => {
                     <button className='bg-blue-900 ml-2 p-2' onClick={markDone}>Mark Done</button>
                 </div>
             </div>
+            {showMessage && <p className="bg-green-500 text-center mt-2">Weight Saved!</p>}
         </div>
     )
 }
