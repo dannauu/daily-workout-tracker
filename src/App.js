@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="bg-black h-screen overflow-hidden">
       <div className='flex justify-center text-white'>
-        <select value={selectedOption} onChange={handleChange} className='text-center rounded bg-black'>
+        <select value={selectedOption} onChange={handleChange} className='text-center rounded text-xl bg-black'>
           <option value="/">Change Day</option>
           <option value="/monday">Monday</option>
           <option value="/tuesday">Tuesday</option>
