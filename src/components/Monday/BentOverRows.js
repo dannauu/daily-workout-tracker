@@ -36,7 +36,7 @@ const BentOverRows = () => {
     }
 
     return (
-        <div className='p-2 h-96 bg-contain bg-no-repeat font-semibold slide-in-elliptic-bottom-bck' style={{ backgroundImage: `url(${BentOverRowImg})` }}>
+        <div className='p-2 h-96 bg-contain bg-no-repeat font-semibold' style={{ backgroundImage: `url(${BentOverRowImg})` }}>
             <div className='bg-black/50 p-2'>
                 <h1 className='text-2xl'>Bent Over Rows</h1>
                 <h2 className='mb-4'>Last Weeks Weight: <span className='text-lime-500 font-extrabold'>{items}</span></h2>
