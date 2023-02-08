@@ -10,6 +10,7 @@ import Saturday from './components/Saturday/Saturday'
 import Sunday from './components/Sunday/Sunday'
 import { Route, Routes, Link } from "react-router-dom"
 import RandomQuote from './components/RandomQuote/RandomQuote';
+import Space from './components/assets/img/space.jpg'
 
 function App() {
   const day = dayjs().day()
@@ -22,7 +23,7 @@ function App() {
   };
 
   return (
-    <div className="bg-black h-screen overflow-hidden">
+    <div className="bg-cover h-screen overflow-hidden" style={{ backgroundImage: `url(${Space})` }}>
       <div className='flex justify-center text-white py-2'>
         <select value={selectedOption} onChange={handleChange} className='text-center rounded text-xl bg-black'>
           <option value="/">Change Day</option>
