@@ -50,8 +50,8 @@ const Thursday = () => {
       <div>
         <p className='text-center'>Gym Hours: 5:00AM-9:00PM</p>
         <p className='text-center'>Today: {date}</p>
-        <h1 className='text-center text-6xl p-1 bg-white text-black'>Thursday</h1>
-        <h2 className='text-center text-2xl p-3 text-green-600'>Shoulders</h2>
+        <h1 className='text-center text-6xl p-1 '>Thursday</h1>
+        <h2 className='text-center text-2xl p-3 '>Shoulders</h2>
       </div>
       <div className='grid grid-cols-3 gap-4 place-items-center mb-10'>
         <Link to='/thursday/dumbbell-shoulder-press' className='' id='dumbbell-shoulder-press'>

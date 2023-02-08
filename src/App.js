@@ -26,7 +26,8 @@ function App() {
     <div className="bg-cover h-screen overflow-hidden" style={{ backgroundImage: `url(${Space})` }}>
       <div className='flex justify-center text-white py-2'>
         <select value={selectedOption} onChange={handleChange} className='text-center rounded text-xl bg-black'>
-          <option value="/">Change Day</option>
+          <option default value="/">Change Day</option>
+          <option default value="/">Home</option>
           <option value="/monday">Monday</option>
           <option value="/tuesday">Tuesday</option>
           <option value="/wednesday">Wednesday</option>
