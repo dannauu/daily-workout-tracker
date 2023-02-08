@@ -57,7 +57,7 @@ function App() {
               case 4:
                 return <Thursday />;
               case 5:
-                return <Thursday />;
+                return <Friday />;
               default:
                 return <Saturday />;
             }

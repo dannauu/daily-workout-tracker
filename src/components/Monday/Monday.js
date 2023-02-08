@@ -56,22 +56,22 @@ const Monday = () => {
         <h2 className='text-2xl p-3 text-green-600'>Back</h2>
       </div>
       <div className='grid grid-cols-3 gap-4 place-items-center mb-10'>
-        <Link to='/monday/deadlift' className='shadow-md shadow-white' id='deadlift'>
+        <Link to='/monday/deadlift' className='' id='deadlift'>
           <img src={DeadliftImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/monday/back-extension' className='shadow-md shadow-white' id='back-extension'>
+        <Link to='/monday/back-extension' className='' id='back-extension'>
           <img src={BackExtensionImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/monday/seated-rows' className='shadow-md shadow-white' id='seated-rows'>
+        <Link to='/monday/seated-rows' className='' id='seated-rows'>
           <img src={SeatedRowsImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/monday/bent-over-rows' className='shadow-md shadow-white' id='bent-over-rows'>
+        <Link to='/monday/bent-over-rows' className='' id='bent-over-rows'>
           <img src={BentOverRowImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/monday/dumbbell-row' className='shadow-md shadow-white' id='dumbbell-row'>
+        <Link to='/monday/dumbbell-row' className='' id='dumbbell-row'>
           <img src={DumbbellRowImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/monday/lat-pulldown' className='shadow-md shadow-white' id='lat-pulldown'>
+        <Link to='/monday/lat-pulldown' className='' id='lat-pulldown'>
           <img src={LatpulldownImg} className='img rounded' alt='img'></img>
         </Link>
       </div>

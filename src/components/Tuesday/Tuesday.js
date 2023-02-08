@@ -54,22 +54,22 @@ const Tuesday = () => {
         <h2 className='text-2xl p-3 text-green-600'>Chest</h2>
       </div>
       <div className='grid grid-cols-3 gap-4 place-items-center mb-10'>
-        <Link to='/tuesday/incline-bench' className='shadow-md shadow-white' id="incline-bench">
+        <Link to='/tuesday/incline-bench' className='' id="incline-bench">
           <img src={InclineBenchImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/tuesday/decline-bench' className='shadow-md shadow-white' id="decline-bench">
+        <Link to='/tuesday/decline-bench' className='' id="decline-bench">
           <img src={DeclineBenchImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/tuesday/dumbbell-chest-fly' className='shadow-md shadow-white' id="dumbbell-chest-fly">
+        <Link to='/tuesday/dumbbell-chest-fly' className='' id="dumbbell-chest-fly">
           <img src={DumbbellChestFlyImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/tuesday/cable-fly' className='shadow-md shadow-white' id="cable-fly">
+        <Link to='/tuesday/cable-fly' className='' id="cable-fly">
           <img src={CableFlyImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/tuesday/dumbbell-chest-press' className='shadow-md shadow-white' id="dumbbell-chest-press">
+        <Link to='/tuesday/dumbbell-chest-press' className='' id="dumbbell-chest-press">
           <img src={DumbbellChestPressImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/tuesday/machine-chest-press' className='shadow-md shadow-white' id="machine-chest-press">
+        <Link to='/tuesday/machine-chest-press' className='' id="machine-chest-press">
           <img src={MachineChestPressImg} className='img rounded' alt='img'></img>
         </Link>
       </div>

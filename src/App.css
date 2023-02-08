@@ -16,14 +16,14 @@
 
 .completed {
     border: red solid 2px;
-    
+
 }
 
 .crossout-container {
     position: relative;
-  }
-  
-  .crossout-container:before {
+}
+
+.crossout-container:before {
     content: "X";
     color: red;
     font-size: 50px;
@@ -32,4 +32,5 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+}
+

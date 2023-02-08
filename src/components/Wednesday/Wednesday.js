@@ -55,22 +55,22 @@ const Wednesday = () => {
         <h2 className='text-2xl p-3 text-green-600'>Legs</h2>
       </div>
       <div className='grid grid-cols-3 gap-4 place-items-center mb-10'>
-        <Link to='/wednesday/bulgarian' className='shadow-md shadow-white' id='bulgarian'>
+        <Link to='/wednesday/bulgarian' className='' id='bulgarian'>
           <img src={BulgarianSquatImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/wednesday/calf-raises' className='shadow-md shadow-white' id='calf-raises'>
+        <Link to='/wednesday/calf-raises' className='' id='calf-raises'>
           <img src={CalfRaisesImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/wednesday/leg-press' className='shadow-md shadow-white' id='leg-press'>
+        <Link to='/wednesday/leg-press' className='' id='leg-press'>
           <img src={LegPressImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/wednesday/lunges' className='shadow-md shadow-white' id='lunges'>
+        <Link to='/wednesday/lunges' className='' id='lunges'>
           <img src={LungesImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/wednesday/squats' className='shadow-md shadow-white' id='squats'>
+        <Link to='/wednesday/squats' className='' id='squats'>
           <img src={SquatImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/wednesday/wallsit' className='shadow-md shadow-white' id='wallsit'>
+        <Link to='/wednesday/wallsit' className='' id='wallsit'>
           <img src={WallsitImg} className='img rounded' alt='img'></img>
         </Link>
       </div>

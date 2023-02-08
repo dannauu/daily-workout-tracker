@@ -54,22 +54,22 @@ const Thursday = () => {
         <h2 className='text-center text-2xl p-3 text-green-600'>Shoulders</h2>
       </div>
       <div className='grid grid-cols-3 gap-4 place-items-center mb-10'>
-        <Link to='/thursday/dumbbell-shoulder-press' className='shadow-md shadow-white' id='dumbbell-shoulder-press'>
+        <Link to='/thursday/dumbbell-shoulder-press' className='' id='dumbbell-shoulder-press'>
           <img src={DumbbellShoulderPressImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/thursday/shrugs' className='shadow-md shadow-white' id='shrugs'>
+        <Link to='/thursday/shrugs' className='' id='shrugs'>
           <img src={ShrugsImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/thursday/reverse-fly' className='shadow-md shadow-white' id='reverse-fly'>
+        <Link to='/thursday/reverse-fly' className='' id='reverse-fly'>
           <img src={ReverseFlysImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/thursday/lateral-raises' className='shadow-md shadow-white' id='lateral-raises'>
+        <Link to='/thursday/lateral-raises' className='' id='lateral-raises'>
           <img src={LateralRaisesImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/thursday/machine-shoulder-press' className='shadow-md shadow-white' id='machine-shoulder-press'>
+        <Link to='/thursday/machine-shoulder-press' className='' id='machine-shoulder-press'>
           <img src={MachineShoulderPressImg} className='img rounded' alt='img'></img>
         </Link>
-        <Link to='/thursday/behind-back-shrugs' className='shadow-md shadow-white' id='behind-back-shrugs'>
+        <Link to='/thursday/behind-back-shrugs' className='' id='behind-back-shrugs'>
           <img src={BehindShrugsImg} className='img rounded' alt='img'></img>
         </Link>
       </div>

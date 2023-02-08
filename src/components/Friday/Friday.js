@@ -57,22 +57,22 @@ const Friday = () => {
         <h2 className='text-2xl p-3 text-green-600'>Bicep and Tricep</h2>
       </div>
       <div className='grid grid-cols-3 gap-4 place-items-center mb-10'>
-        <Link to='/friday/curls' className='shadow-md shadow-white' id='curls'>
+        <Link to='/friday/curls' className='' id='curls'>
           <img src={StandingCurlsImg} className='img' alt='Standing-Curls-img'></img>
         </Link>
-        <Link to='/friday/hammer' className='shadow-md shadow-white' id='hammer'>
+        <Link to='/friday/hammer' className='' id='hammer'>
           <img src={StandingHamCurlsImg} className='img rounded' alt='Standing-Hammer-Curls-img'></img>
         </Link>
-        <Link to='/friday/zottman-curls' className='shadow-md shadow-white' id='zottman-curls'>
+        <Link to='/friday/zottman-curls' className='' id='zottman-curls'>
           <img src={ZottmanCurlsImg} className='img rounded' alt='Zottman-Curls-img'></img>
         </Link>
-        <Link to='/friday/rope-pulldown' className='shadow-md shadow-white' id='rope-pulldowns'>
+        <Link to='/friday/rope-pulldown' className='' id='rope-pulldowns'>
           <img src={RopePulldownsImg} className='img rounded' alt='Rope-Pulldowns-img'></img>
         </Link>
-        <Link to='/friday/tricep-extension' className='shadow-md shadow-white' id='tricep-extension'>
+        <Link to='/friday/tricep-extension' className='' id='tricep-extension'>
           <img src={TricepExtensionsImg} className='img rounded' alt='Tricep-Extensions-img'></img>
         </Link>
-        <Link to='/friday/skull-crusher' className='shadow-md shadow-white' id='skull-crusher'>
+        <Link to='/friday/skull-crusher' className='' id='skull-crusher'>
           <img src={SkullCrusherImg} className='img rounded' alt='Skull-Crusher-img'></img>
         </Link>
       </div>
