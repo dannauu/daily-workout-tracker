@@ -1,4 +1,4 @@
-#Image credit: https://strengthlevel.com/
+# Image credit: https://strengthlevel.com/
 
 ## Application is for demonstration purposes only.
 
